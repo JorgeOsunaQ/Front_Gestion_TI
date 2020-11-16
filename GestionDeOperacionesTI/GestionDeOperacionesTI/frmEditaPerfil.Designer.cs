@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditaPerfil));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpDatos = new System.Windows.Forms.GroupBox();
+            this.txtNumCel = new System.Windows.Forms.TextBox();
+            this.txtDir = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCel = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblCel = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtDir = new System.Windows.Forms.TextBox();
-            this.txtNumCel = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grpDatos.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,38 @@
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Información";
             // 
+            // txtNumCel
+            // 
+            this.txtNumCel.Location = new System.Drawing.Point(67, 159);
+            this.txtNumCel.Name = "txtNumCel";
+            this.txtNumCel.Size = new System.Drawing.Size(335, 58);
+            this.txtNumCel.TabIndex = 3;
+            // 
+            // txtDir
+            // 
+            this.txtDir.Location = new System.Drawing.Point(67, 288);
+            this.txtDir.Name = "txtDir";
+            this.txtDir.Size = new System.Drawing.Size(516, 58);
+            this.txtDir.TabIndex = 2;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(62, 241);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(131, 48);
+            this.lblEmail.TabIndex = 1;
+            this.lblEmail.Text = "Dirección";
+            // 
+            // lblCel
+            // 
+            this.lblCel.AutoSize = true;
+            this.lblCel.Location = new System.Drawing.Point(62, 104);
+            this.lblCel.Name = "lblCel";
+            this.lblCel.Size = new System.Drawing.Size(202, 48);
+            this.lblCel.TabIndex = 0;
+            this.lblCel.Text = "Número celular";
+            // 
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -88,38 +120,6 @@
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "CONFIGURACIÓN";
             // 
-            // lblCel
-            // 
-            this.lblCel.AutoSize = true;
-            this.lblCel.Location = new System.Drawing.Point(62, 104);
-            this.lblCel.Name = "lblCel";
-            this.lblCel.Size = new System.Drawing.Size(202, 48);
-            this.lblCel.TabIndex = 0;
-            this.lblCel.Text = "Número celular";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(62, 241);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(131, 48);
-            this.lblEmail.TabIndex = 1;
-            this.lblEmail.Text = "Dirección";
-            // 
-            // txtDir
-            // 
-            this.txtDir.Location = new System.Drawing.Point(67, 288);
-            this.txtDir.Name = "txtDir";
-            this.txtDir.Size = new System.Drawing.Size(516, 58);
-            this.txtDir.TabIndex = 2;
-            // 
-            // txtNumCel
-            // 
-            this.txtNumCel.Location = new System.Drawing.Point(67, 159);
-            this.txtNumCel.Name = "txtNumCel";
-            this.txtNumCel.Size = new System.Drawing.Size(335, 58);
-            this.txtNumCel.TabIndex = 3;
-            // 
             // frmEditaPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -133,6 +133,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditaPerfil";
             this.Text = "frmEditaPerfil";
+            this.Load += new System.EventHandler(this.frmEditaPerfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();

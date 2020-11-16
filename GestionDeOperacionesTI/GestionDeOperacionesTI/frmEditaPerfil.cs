@@ -49,12 +49,18 @@ namespace GestionDeOperacionesTI
             AdmEmp.UpdateCel(IDEmp,NumCel);
             AdmEmp.UpdateDir(IDEmp, Dir);
             Limpiar();
-            
         }
         private void Limpiar()
         {
             txtNumCel.Text = "";
             txtDir.Text = "";
+        }
+
+        private void frmEditaPerfil_Load(object sender, EventArgs e)
+        {
+
+            txtNumCel.Text = AdmEmp.GetCelular(IDEmp);
+            txtDir.Text = AdmEmp.GetDir(IDEmp);
         }
     }
 }

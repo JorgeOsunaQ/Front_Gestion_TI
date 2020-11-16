@@ -194,10 +194,10 @@ namespace GestionDeOperacionesTI
             Connection.Close();
             return Rol;
         }
-        /*public string GetNombre(int ID)
+        public string GetCelular(int ID)
         {
             SqlConnection Connection = UsoBD.ConectaBD(Utileria.GetConnectionString());
-            string Nom ="";
+            string Cel ="";
 
             if (Connection == null)
             {
@@ -205,11 +205,11 @@ namespace GestionDeOperacionesTI
 
                 foreach (SqlError E in UsoBD.ESalida.Errors)
                     MessageBox.Show(E.Message);
-                return Nom;
+                return Cel;
             }
             SqlDataReader Lector = null;
 
-            string strComandoC = "SELECT Nombre FROM EMPLEADO WHERE ID="+ID;
+            string strComandoC = "SELECT Celular FROM EMPLEADO WHERE ID=" + ID;
 
             Lector = UsoBD.Consulta(strComandoC, Connection);
             if (Lector == null)
@@ -219,22 +219,22 @@ namespace GestionDeOperacionesTI
                     MessageBox.Show(E.Message);
 
                 Connection.Close();
-                return Nom;
+                return Cel;
             }
             if (Lector.HasRows)
             {
                 while (Lector.Read())
                 {
-                    Nom = Lector.GetValue(0).ToString();
+                    Cel = Lector.GetValue(0).ToString();
                 }
             }
             Connection.Close();
-            return Nom;
+            return Cel;
         }
-        public string GetDepto(int ID)
+        public string GetDir(int ID)
         {
             SqlConnection Connection = UsoBD.ConectaBD(Utileria.GetConnectionString());
-            string Depto="";
+            string Dir="";
 
             if (Connection == null)
             {
@@ -242,13 +242,11 @@ namespace GestionDeOperacionesTI
 
                 foreach (SqlError E in UsoBD.ESalida.Errors)
                     MessageBox.Show(E.Message);
-                return Depto;
+                return Dir;
             }
             SqlDataReader Lector = null;
 
-            string strComandoC = "SELECT ND.Nombre FROM EMPLEADO E INNER JOIN EMPLEADO_DEPTO D ON " +
-                "E.ID = D.ID_Empleado INNER JOIN DEPARTAMENTO ND ON " +
-                "D.ID_Depto = ND.ID WHERE E.ID =" + ID;
+            string strComandoC = "SELECT Direccion FROM EMPLEADO WHERE ID=" + ID;
 
             Lector = UsoBD.Consulta(strComandoC, Connection);
             if (Lector == null)
@@ -258,17 +256,17 @@ namespace GestionDeOperacionesTI
                     MessageBox.Show(E.Message);
 
                 Connection.Close();
-                return Depto;
+                return Dir;
             }
             if (Lector.HasRows)
             {
                 while (Lector.Read())
                 {
-                    Depto = Lector.GetValue(0).ToString();
+                    Dir = Lector.GetValue(0).ToString();
                 }
             }
             Connection.Close();
-            return Depto;
-        }*/
+            return Dir;
+        }
     }
 }
